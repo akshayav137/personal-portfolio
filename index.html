@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Akshaya's Portfolio</title>
+
+    <!-- CSS is inside the HTML file -->
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+
+        /* NAVIGATION BAR */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 70px 10%;
+        }
+
+
+        /* HOME SECTION */
+
+        #home {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #home h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        #home p {
+            font-size: 20px;
+            max-width: 600px;
+        }
+
+
+        /* PROJECT CARDS */
+
+        .project-card {
+            background-color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: white;
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                padding: 0;
+            }
+
+            #home h1 {
+                font-size: 36px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+
+    <!-- HOME -->
+
+    <section id="home">
+
+        <h1>Hi, I'm Akshaya!</h1>
+
+        <p>
+            Welcome to my personal portfolio. This website will
+            showcase the projects and skills I develop throughout
+            15-113.
+        </p>
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a college student interested in technology,
+            problem solving, and learning how technology can
+            be used to create useful projects.
+        </p>
+
+        <h3>My Interests</h3>
+
+        <ul>
+            <li>Technology</li>
+            <li>Problem Solving</li>
+            <li>Design</li>
+            <li>Learning new skills</li>
+        </ul>
+
+    </section>
+
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-card">
+
+            <h3>Personal Portfolio Website</h3>
+
+            <p>
+                My first 15-113 project is this personal portfolio
+                website. I am using HTML and CSS to build it.
+            </p>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h3>Future Project</h3>
+
+            <p>
+                More projects will be added here throughout
+                the semester.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>
+            Email:
+            <a href="mailto:akv62@pitt.edu">
+                akv62@pitt.edu
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="#">My GitHub</a>
+        </p>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>Created for 15-113</p>
+    </footer>
+
+
+
+    <!-- JAVASCRIPT GOES HERE LATER -->
+
+    <script>
+
+        // JavaScript functionality can be added here later.
+
+        // Planned feature:
+        // Add a dark mode button or another interactive feature.
+
+    </script>
+
+
+</body>
+
+</html>
