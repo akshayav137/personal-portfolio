@@ -82,6 +82,22 @@ section {
     border-radius: 10px;
 }
 
+/* =========================
+   AI CREDIT
+   ========================= */
+
+.ai-credit {
+    margin-top: 45px;
+    padding-top: 15px;
+
+    border-top: 1px solid var(--beige);
+
+    font-size: 13px;
+    color: #777;
+
+    text-align: center;
+}
+
 
 /* Footer */
 

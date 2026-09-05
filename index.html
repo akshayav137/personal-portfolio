@@ -174,6 +174,10 @@
             background-color: #efe9dc;
         }
 
+        .home-card:nth-child(5) {
+            background-color: var(--light-sage);
+        }
+
         .home-card:hover {
             transform: translateY(-8px);
 
@@ -198,7 +202,6 @@
 
         .content-page {
             min-height: calc(100vh - 80px);
-
             padding: 70px 10%;
         }
 
@@ -206,7 +209,6 @@
             max-width: 900px;
 
             margin: auto;
-
             padding: 45px;
 
             background-color: white;
@@ -220,9 +222,7 @@
 
         .content-box h1 {
             color: var(--dark-sage);
-
             font-size: 42px;
-
             margin-top: 0;
         }
 
@@ -240,7 +240,6 @@
             color: var(--dark-sage);
 
             font-size: 20px;
-
             font-weight: normal;
 
             margin-top: -15px;
@@ -249,14 +248,13 @@
 
 
         /* =========================
-           EXPERIENCE CARDS
+           EXPERIENCE / PROJECT CARDS
            ========================= */
 
         .experience-card {
             background-color: white;
 
             border: 2px solid var(--beige);
-
             border-radius: 16px;
 
             margin: 25px 0;
@@ -280,9 +278,6 @@
                 rgba(0, 0, 0, 0.10);
         }
 
-
-        /* EXPERIENCE CARD TITLE */
-
         .experience-title {
             width: 100%;
 
@@ -293,7 +288,6 @@
             align-items: center;
 
             background-color: var(--light-sage);
-
             color: var(--text-dark);
 
             border: none;
@@ -317,9 +311,6 @@
                 transform 0.3s ease;
         }
 
-
-        /* EXPERIENCE TEXT */
-
         .experience-details {
             display: none;
 
@@ -342,9 +333,7 @@
 
         .experience-details p {
             font-size: 17px;
-
             line-height: 1.7;
-
             margin-bottom: 18px;
         }
 
@@ -376,14 +365,29 @@
 
 
         /* =========================
+           AI CREDIT
+           ========================= */
+
+        .ai-credit {
+            margin-top: 45px;
+            padding-top: 15px;
+
+            border-top: 1px solid var(--beige);
+
+            font-size: 13px !important;
+            color: #777;
+
+            text-align: center;
+        }
+
+
+        /* =========================
            FOOTER
            ========================= */
 
         footer {
             text-align: center;
-
             padding: 25px;
-
             background-color: var(--beige);
         }
 
@@ -449,6 +453,12 @@
 
             <li>
                 <a onclick="showPage('projects')">
+                    Experiences
+                </a>
+            </li>
+
+            <li>
+                <a onclick="showPage('my-projects')">
                     Projects
                 </a>
             </li>
@@ -506,7 +516,7 @@
 
 
 
-            <!-- PROJECT CARD -->
+            <!-- EXPERIENCES CARD -->
 
             <button
                 class="home-card"
@@ -515,9 +525,27 @@
                 <h2>My Experiences</h2>
 
                 <p>
-                    Explore projects, research,
-                    volunteering, and other experiences
+                    Explore research, volunteering,
+                    work, and other experiences
                     I have been involved in.
+                </p>
+
+            </button>
+
+
+
+            <!-- PROJECTS CARD -->
+
+            <button
+                class="home-card"
+                onclick="showPage('my-projects')">
+
+                <h2>My Projects</h2>
+
+                <p>
+                    Explore some of the academic
+                    and personal projects I have
+                    worked on.
                 </p>
 
             </button>
@@ -560,12 +588,19 @@
 
         </div>
 
+
+        <!-- AI CREDIT -->
+
+        <p class="ai-credit">
+            This website was created with assistance from ChatGPT by OpenAI.
+        </p>
+
     </section>
 
 
 
     <!-- =========================
-         ABOUT ME PAGE                      //learned how to divide paras where with the <p>
+         ABOUT ME PAGE
          ========================= -->
 
     <section
@@ -606,6 +641,11 @@
 
             </button>
 
+
+            <p class="ai-credit">
+                This website was created with assistance from ChatGPT by OpenAI.
+            </p>
+
         </div>
 
     </section>
@@ -627,7 +667,7 @@
 
             <!-- MINI RESEARCH PROJECT -->
 
-            <div class="experience-card">    <!-- was able to make dropdown with chat for each experience card-->
+            <div class="experience-card">
 
                 <button
                     class="experience-title"
@@ -726,7 +766,9 @@
 
             </div>
 
-                        <!-- NEW EXPERIENCE -->
+
+
+            <!-- PITT PATHFINDER -->
 
             <div class="experience-card">
 
@@ -734,7 +776,6 @@
                     class="experience-title"
                     onclick="toggleExperience('new-experience-details', this)">
 
-                    <!-- WRITE EXPERIENCE TITLE HERE -->
                     Pitt Pathfinder | Tour Guide
 
                     <span>⌄</span>
@@ -747,192 +788,332 @@
                     class="experience-details">
 
                     <h3>
-                        <!-- WRITE DATE / DATE RANGE HERE -->
                         September 2025 - Present
                     </h3>
 
                     <p>
-                        <!-- WRITE YOUR FIRST PARAGRAPH HERE -->
-                        I'm a Pitt Pathfinder ( College Tour Guide) for the University of Pittsburgh. 
-                        I did extensive training throughout my first semsester as a first-year at Pitt. 
-                        Beyond being a paid job on campus, this role gives us the opportunity to showcase 
-                        what makes our university such an amazing place to prospective students.
-                        The training and the job so far is one of the best experiences of my life. It pulled me out 
-                        of my shell and motivated me to interact and connect with people all over the world. Every week 
-                        I meet people from around the country and the globe and interact with students and their families, 
-                        taking on the job of easing them into a new chapter that can be quite daunting as a high school 
-                        student. 
+                        I'm a Pitt Pathfinder (College Tour Guide) for the
+                        University of Pittsburgh. I did extensive training
+                        throughout my first semester as a first-year at Pitt.
+                        Beyond being a paid job on campus, this role gives us
+                        the opportunity to showcase what makes our university
+                        such an amazing place to prospective students.
+                        The training and the job so far is one of the best
+                        experiences of my life. It pulled me out of my shell
+                        and motivated me to interact and connect with people
+                        all over the world. Every week I meet people from
+                        around the country and the globe and interact with
+                        students and their families, taking on the job of
+                        easing them into a new chapter that can be quite
+                        daunting as a high school student.
                     </p>
 
                     <p>
-                        <!-- WRITE YOUR SECOND PARAGRAPH HERE -->
-                        I learned an extensive variety of skills, the main one being public speaking. During training, we 
-                        had to learn and memorize around 3 1/2 hours worth of material about the University Campus as well as
-                        the City of Pittsburgh. Added to this, we needed to include flow, personality, and quick thinking when
-                        learning on how to talk to families. Aside from public speaking, I also learned time management, as 
-                        training semester was like taking an added 2 credit class and had quite a time commitment, and problem 
-                        solving, interpersonal skills, storytelling and leadership. 
+                        I learned an extensive variety of skills, the main
+                        one being public speaking. During training, we had
+                        to learn and memorize around 3 1/2 hours worth of
+                        material about the University Campus as well as the
+                        City of Pittsburgh. Added to this, we needed to
+                        include flow, personality, and quick thinking when
+                        learning how to talk to families. Aside from public
+                        speaking, I also learned time management, as training
+                        semester was like taking an added 2 credit class and
+                        had quite a time commitment, and problem solving,
+                        interpersonal skills, storytelling and leadership.
                     </p>
 
                     <p>
-                        <!-- WRITE YOUR SECOND PARAGRAPH HERE -->
-                        This semester, I was also on the hiring team, which takes interviews for the incoming hiring class. 
-                        I also met a lot of students through this oppurtunity and it helped my confidence and descision-making.
+                        This semester, I was also on the hiring team, which
+                        takes interviews for the incoming hiring class.
+                        I also met a lot of students through this opportunity
+                        and it helped my confidence and decision-making.
+                    </p>
 
                 </div>
 
             </div>
 
-                        <button
-                            class="back-button"
-                            onclick="showPage('home')">
-
-                            ← Back to Home
-
-                        </button>
-
-                    </div>
-
-                </section>
-
-
-
-<!-- =========================
-     INTERESTS PAGE
-     ========================= -->
-
-<section
-    id="interests"
-    class="page content-page">
-
-    <div class="content-box">
-
-        <h1>Interests And Involvement</h1>
-
-
-        <!-- INTEREST / INVOLVEMENT 1 -->
-
-        <div class="experience-card">
 
             <button
-                class="experience-title"
-                onclick="toggleExperience('interest-one-details', this)">
+                class="back-button"
+                onclick="showPage('home')">
 
-                <!-- REPLACE THIS WITH YOUR TITLE -->
-                HinduYUVA
-
-                <span>⌄</span>
+                ← Back to Home
 
             </button>
 
 
-            <div
-                id="interest-one-details"
-                class="experience-details">
-
-                <p>
-                    This semester I'm a part of HinduYUVA, a religious club
-                    focusing on Hinduism at Pitt. I've connected with a lot
-                    of people through this club and it also focuses on
-                    something that's a big part of my life.
-                </p>
-
-            </div>
+            <p class="ai-credit">
+                This website was created with assistance from ChatGPT by OpenAI.
+            </p>
 
         </div>
 
+    </section>
 
 
-        <!-- INTEREST / INVOLVEMENT 2 -->
 
-        <div class="experience-card">
+    <!-- =========================
+         PROJECTS PAGE
+         ========================= -->
+
+    <section
+        id="my-projects"
+        class="page content-page">
+
+        <div class="content-box">
+
+            <h1>My Projects</h1>
+
+            <p>
+                Here are some of the projects I have worked on.
+            </p>
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="experience-card">
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('project-one-details', this)">
+
+                    Mini Research Project
+
+                    <span>⌄</span>
+
+                </button>
+
+
+                <div
+                    id="project-one-details"
+                    class="experience-details">
+
+                    <h3>
+                        May 2025 - June 2025
+                    </h3>
+
+                    <p>
+                        I co-conducted a small research project with a
+                        professor from West Chester University about the
+                        connection between misdiagnosis of heart attacks
+                        and what gender has to do as a variable and
+                        potential reason.
+                    </p>
+
+                    <p>
+                        I searched and retrieved a dataset that worked for
+                        this particular research topic and used Python to
+                        conduct and run EDAs on the selected datasets and
+                        then prepare and test the hypothesis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="experience-card">
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('project-two-details', this)">
+
+                    Personal Portfolio Website
+
+                    <span>⌄</span>
+
+                </button>
+
+
+                <div
+                    id="project-two-details"
+                    class="experience-details">
+
+                    <h3>
+                        September 2026
+                    </h3>
+
+                    <p>
+                        This is the first portfolio website project
+                        that I've worked on.
+                    </p>
+
+                    <p>
+                        I used HTML, CSS, and JavaScript to create
+                        multiple sections, interactive dropdown menus,
+                        navigation, and a responsive layout.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD MORE PROJECTS BELOW THIS COMMENT -->
+
 
             <button
-                class="experience-title"
-                onclick="toggleExperience('interest-two-details', this)">
+                class="back-button"
+                onclick="showPage('home')">
 
-                <!-- REPLACE THIS WITH YOUR TITLE -->
-                Figure Skating
-
-                <span>⌄</span>
+                ← Back to Home
 
             </button>
 
 
-            <div
-                id="interest-two-details"
-                class="experience-details">
-
-                <p>
-                    The Figure Skating Club at Pitt is an intercollegiate
-                    competition club that I'm a part of. I've figure skated
-                    since I was 7 years old and it has always been a really
-                    big part of my life.
-                </p>
-
-                <p>
-                    I've done competitions all throughout middle and high
-                    school and was really excited when I found out about the
-                    club sport at Pitt. It's a great opportunity to meet new
-                    friends and talented skaters from around the country!
-                </p>
-
-            </div>
+            <p class="ai-credit">
+                This website was created with assistance from ChatGPT by OpenAI.
+            </p>
 
         </div>
 
+    </section>
 
 
-        <!-- INTEREST / INVOLVEMENT 3 -->
 
-        <div class="experience-card">
+    <!-- =========================
+         INTERESTS PAGE
+         ========================= -->
+
+    <section
+        id="interests"
+        class="page content-page">
+
+        <div class="content-box">
+
+            <h1>Interests And Involvement</h1>
+
+
+            <!-- INTEREST / INVOLVEMENT 1 -->
+
+            <div class="experience-card">
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('interest-one-details', this)">
+
+                    HinduYUVA
+
+                    <span>⌄</span>
+
+                </button>
+
+
+                <div
+                    id="interest-one-details"
+                    class="experience-details">
+
+                    <p>
+                        This semester I'm a part of HinduYUVA, a religious club
+                        focusing on Hinduism at Pitt. I've connected with a lot
+                        of people through this club and it also focuses on
+                        something that's a big part of my life.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INTEREST / INVOLVEMENT 2 -->
+
+            <div class="experience-card">
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('interest-two-details', this)">
+
+                    Figure Skating
+
+                    <span>⌄</span>
+
+                </button>
+
+
+                <div
+                    id="interest-two-details"
+                    class="experience-details">
+
+                    <p>
+                        The Figure Skating Club at Pitt is an intercollegiate
+                        competition club that I'm a part of. I've figure skated
+                        since I was 7 years old and it has always been a really
+                        big part of my life.
+                    </p>
+
+                    <p>
+                        I've done competitions all throughout middle and high
+                        school and was really excited when I found out about the
+                        club sport at Pitt. It's a great opportunity to meet new
+                        friends and talented skaters from around the country!
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INTEREST / INVOLVEMENT 3 -->
+
+            <div class="experience-card">
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('interest-three-details', this)">
+
+                    SLE Student Tutoring
+
+                    <span>⌄</span>
+
+                </button>
+
+
+                <div
+                    id="interest-three-details"
+                    class="experience-details">
+
+                    <p>
+                        Through my mom's company, Smart Learning Experience,
+                        I tutor students ranging from Grade 2-Grade 8 on
+                        creative writing classes throughout the week.
+                    </p>
+
+                    <p>
+                        It's a one-on-one class with students who are interested
+                        in gaining more knowledge with essay writing, paragraph
+                        writing, and storytelling, as well as regular grammar,
+                        reading, and comprehension skills.
+                    </p>
+
+                </div>
+
+            </div>
+
 
             <button
-                class="experience-title"
-                onclick="toggleExperience('interest-three-details', this)">
+                class="back-button"
+                onclick="showPage('home')">
 
-                <!-- REPLACE THIS WITH YOUR TITLE -->
-                SLE Student Tutoring
-
-                <span>⌄</span>
+                ← Back to Home
 
             </button>
 
 
-            <div
-                id="interest-three-details"
-                class="experience-details">
-
-                <p>
-                    Through my mom's company, Smart Learning Experience,
-                    I tutor students ranging from Grade 2-Grade 8 on
-                    creative writing classes throughout the week.
-                </p>
-
-                <p>
-                    It's a one-on-one class with students who are interested
-                    in gaining more knowledge with essay writing, paragraph
-                    writing, and storytelling, as well as regular grammar,
-                    reading, and comprehension skills.
-                </p>
-
-            </div>
+            <p class="ai-credit">
+                This website was created with assistance from ChatGPT by OpenAI.
+            </p>
 
         </div>
 
+    </section>
 
 
-        <button
-            class="back-button"
-            onclick="showPage('home')">
-
-            ← Back to Home
-
-        </button>
-
-    </div>
-
-</section>
 
     <!-- =========================
          CONTACT PAGE
@@ -975,6 +1156,11 @@
                 ← Back to Home
 
             </button>
+
+
+            <p class="ai-credit">
+                This website was created with assistance from ChatGPT by OpenAI.
+            </p>
 
         </div>
 
@@ -1029,7 +1215,7 @@
 
 
         /*
-        Opens and closes each experience card.
+        Opens and closes each experience or project card.
         */
 
         function toggleExperience(experienceId, button) {
