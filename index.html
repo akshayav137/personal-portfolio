@@ -6,199 +6,437 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portfolio Website</title>
+    <title>Akshaya's Portfolio</title>
 
-    <!-- CSS is inside the HTML file -->
     <style>
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f5f5;
-            color: #222;
+        /* =========================
+           COLOR PALETTE
+           ========================= */
+
+        :root {
+            --dark-sage: #7C8974;
+            --light-sage: #A9BD9A;
+            --beige: #D8D0C1;
+            --cream: #FBF7EE;
+            --text-dark: #3f463b;
         }
 
 
-        /* NAVIGATION BAR */
+        /* =========================
+           GENERAL
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+        }
+
+
+        /* =========================
+           NAVIGATION
+           ========================= */
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 10%;
-            background-color: white;
+
+            padding: 22px 8%;
+
+            background-color: var(--dark-sage);
+            color: white;
+        }
+
+        nav h2 {
+            margin: 0;
         }
 
         nav ul {
             display: flex;
-            list-style: none;
             gap: 25px;
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         nav a {
+            color: white;
             text-decoration: none;
-            color: #222;
+            cursor: pointer;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            opacity: 0.75;
         }
 
 
-        /* GENERAL SECTIONS */
+        /* =========================
+           PAGE SYSTEM
+           ========================= */
 
-        section {
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+
+        /* =========================
+           HOME PAGE
+           ========================= */
+
+        #home {
+            min-height: calc(100vh - 80px);
+            padding: 70px 8%;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .intro h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+            color: var(--dark-sage);
+        }
+
+        .intro p {
+            font-size: 20px;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HOME CARDS
+           ========================= */
+
+        .card-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 25px;
+
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .home-card {
+            min-height: 220px;
+
+            padding: 30px;
+
+            border: none;
+            border-radius: 18px;
+
+            cursor: pointer;
+
+            text-align: left;
+
+            color: var(--text-dark);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .home-card:nth-child(1) {
+            background-color: var(--light-sage);
+        }
+
+        .home-card:nth-child(2) {
+            background-color: var(--beige);
+        }
+
+        .home-card:nth-child(3) {
+            background-color: var(--dark-sage);
+            color: white;
+        }
+
+        .home-card:nth-child(4) {
+            background-color: #efe9dc;
+        }
+
+        .home-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(0, 0, 0, 0.12);
+        }
+
+        .home-card h2 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        .home-card p {
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           INDIVIDUAL PAGES
+           ========================= */
+
+        .content-page {
+            min-height: calc(100vh - 80px);
+
             padding: 70px 10%;
         }
 
+        .content-box {
+            max-width: 900px;
 
-        /* HOME SECTION */
+            margin: auto;
 
-        #home {
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+            padding: 45px;
 
-        #home h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        #home p {
-            font-size: 20px;
-            max-width: 600px;
-        }
-
-
-        /* PROJECT CARDS */
-
-        .project-card {
             background-color: white;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 10px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.08);
+        }
+
+        .content-box h1 {
+            color: var(--dark-sage);
+
+            font-size: 42px;
+
+            margin-top: 0;
+        }
+
+        .content-box p {
+            line-height: 1.7;
+            font-size: 18px;
         }
 
 
-        /* FOOTER */
+        /* =========================
+           BACK BUTTON
+           ========================= */
+
+        .back-button {
+            margin-top: 30px;
+
+            padding: 12px 22px;
+
+            background-color: var(--dark-sage);
+            color: white;
+
+            border: none;
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: var(--light-sage);
+            color: var(--text-dark);
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
 
         footer {
             text-align: center;
+
             padding: 25px;
-            background-color: white;
+
+            background-color: var(--beige);
         }
 
 
-        /* RESPONSIVE DESIGN */
+        /* =========================
+           MOBILE
+           ========================= */
 
         @media (max-width: 700px) {
 
             nav {
                 flex-direction: column;
+                gap: 15px;
             }
 
             nav ul {
-                padding: 0;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            #home h1 {
-                font-size: 36px;
+            .intro h1 {
+                font-size: 40px;
             }
+
+            .content-box {
+                padding: 30px;
+            }
+
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
 
     <nav>
 
-        <h2>My Portfolio</h2>
+        <h2>Akshaya's Portfolio</h2>
 
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a onclick="showPage('home')">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a onclick="showPage('about')">
+                    About Me
+                </a>
+            </li>
+
+            <li>
+                <a onclick="showPage('projects')">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a onclick="showPage('contact')">
+                    Contact
+                </a>
+            </li>
+
         </ul>
 
     </nav>
 
 
 
-    <!-- HOME -->
+    <!-- =========================
+         HOME PAGE
+         ========================= -->
 
-    <section id="home">
+    <section id="home" class="page active">
 
-        <h1>Hi, I'm Akshaya!</h1>
+        <div class="intro">
 
-        <p>
-            Welcome to my personal portfolio. This website will
-            showcase the projects and skills I develop throughout
-            15-113.
-        </p>
-
-    </section>
-
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <p>
-            I am a college student interested in technology,
-            problem solving, and learning how technology can
-            be used to create useful projects.
-        </p>
-
-        <h3>My Interests</h3>
-
-        <ul>
-            <li>Technology</li>
-            <li>Problem Solving</li>
-            <li>Design</li>
-            <li>Learning new skills</li>
-        </ul>
-
-    </section>
-
-
-
-    <!-- PROJECTS -->
-
-    <section id="projects">
-
-        <h2>My Projects</h2>
-
-        <div class="project-card">
-
-            <h3>Personal Portfolio Website</h3>
+            <h1>Akshaya's Portfolio</h1>
 
             <p>
-                My first 15-113 project is this personal portfolio
-                website. I am using HTML and CSS to build it.
+                Welcome to my personal portfolio!
+                Explore the sections below to learn
+                more about me, my work, and the
+                projects I create.
             </p>
 
         </div>
 
 
-        <div class="project-card">
+        <div class="card-container">
 
-            <h3>Future Project</h3>
 
-            <p>
-                More projects will be added here throughout
-                the semester.
-            </p>
+            <!-- ABOUT CARD -->
+
+            <button
+                class="home-card"
+                onclick="showPage('about')">
+
+                <h2>About Me</h2>
+
+                <p>
+                    Learn more about who I am,
+                    my interests, background,
+                    and experiences.
+                </p>
+
+            </button>
+
+
+
+            <!-- PROJECT CARD -->
+
+            <button
+                class="home-card"
+                onclick="showPage('projects')">
+
+                <h2>My Projects</h2>
+
+                <p>
+                    Explore projects I have created
+                    and work I complete throughout
+                    the semester.
+                </p>
+
+            </button>
+
+
+
+            <!-- SKILLS CARD -->
+
+            <button
+                class="home-card"
+                onclick="showPage('skills')">
+
+                <h2>Skills</h2>
+
+                <p>
+                    View some of the skills,
+                    tools, and technologies
+                    I have experience with.
+                </p>
+
+            </button>
+
+
+
+            <!-- CONTACT CARD -->
+
+            <button
+                class="home-card"
+                onclick="showPage('contact')">
+
+                <h2>Contact Me</h2>
+
+                <p>
+                    Find my email, GitHub,
+                    and other ways to reach me.
+                </p>
+
+            </button>
+
 
         </div>
 
@@ -206,44 +444,230 @@
 
 
 
-    <!-- CONTACT -->
+    <!-- =========================
+         ABOUT ME PAGE
+         ========================= -->
 
-    <section id="contact">
+    <section
+        id="about"
+        class="page content-page">
 
-        <h2>Contact Me</h2>
+        <div class="content-box">
 
-        <p>
-            Email:
-            <a href="mailto:akv62@pitt.edu">
-                akv62@pitt.edu
-            </a>
-        </p>
+            <h1>About Me</h1>
 
-        <p>
-            GitHub:
-            <a href="#">My GitHub</a>
-        </p>
+            <p>
+                This is where I will write information
+                about myself.
+            </p>
+
+            <p>
+                I can include information about my
+                education, interests, hobbies,
+                experiences, and goals here.
+            </p>
+
+            <!-- ADD MORE CONTENT HERE -->
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← Back to Home
+
+            </button>
+
+        </div>
 
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         PROJECTS PAGE
+         ========================= -->
+
+    <section
+        id="projects"
+        class="page content-page">
+
+        <div class="content-box">
+
+            <h1>My Projects</h1>
+
+            <p>
+                This is where I will display my projects.
+            </p>
+
+
+            <h2>
+                Personal Portfolio Website
+            </h2>
+
+            <p>
+                My first project is this personal
+                portfolio website created using
+                HTML, CSS, and JavaScript.
+            </p>
+
+
+            <!-- ADD MORE PROJECTS HERE -->
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← Back to Home
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS PAGE
+         ========================= -->
+
+    <section
+        id="skills"
+        class="page content-page">
+
+        <div class="content-box">
+
+            <h1>My Skills</h1>
+
+            <p>
+                This is where I can list skills
+                I have learned or am currently learning.
+            </p>
+
+
+            <ul>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>Problem Solving</li>
+
+                <li>Design</li>
+
+            </ul>
+
+
+            <!-- ADD MORE SKILLS HERE -->
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← Back to Home
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT PAGE
+         ========================= -->
+
+    <section
+        id="contact"
+        class="page content-page">
+
+        <div class="content-box">
+
+            <h1>Contact Me</h1>
+
+            <p>
+                Email:
+                <a href="mailto:akv62@pitt.edu">
+                    akv62@pitt.edu
+                </a>
+            </p>
+
+
+            <p>
+                GitHub:
+                <a href="#">
+                    My GitHub
+                </a>
+            </p>
+
+
+            <!-- ADD MORE CONTACT INFO HERE -->
+
+
+            <button
+                class="back-button"
+                onclick="showPage('home')">
+
+                ← Back to Home
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
     <footer>
-        <p>Created for 15-113</p>
+
+        <p>
+            Akshaya's Portfolio
+        </p>
+
     </footer>
 
 
 
-    <!-- JAVASCRIPT GOES HERE LATER -->
+    <!-- =========================
+         JAVASCRIPT
+         ========================= -->
 
     <script>
 
-        // JavaScript functionality can be added here later.
+        function showPage(pageId) {
 
-        // Planned feature:
-        // Add a dark mode button or another interactive feature.
+            // Find all sections with the class "page"
+            const pages =
+                document.querySelectorAll(".page");
+
+
+            // Hide every page
+            pages.forEach(function(page) {
+
+                page.classList.remove("active");
+
+            });
+
+
+            // Show the page that was clicked
+            document
+                .getElementById(pageId)
+                .classList
+                .add("active");
+
+
+            // Return to the top of the screen
+            window.scrollTo(0, 0);
+
+        }
 
     </script>
 
