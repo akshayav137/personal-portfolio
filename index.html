@@ -524,15 +524,18 @@
 
 
 
+            <!-- INTERESTS CARD -->
 
             <button
                 class="home-card"
+                onclick="showPage('interests')">
 
+                <h2>Interests And Involvement</h2>
 
                 <p>
-                    View some of the skills,
-                    tools, and technologies
-                    I have experience with.
+                    Learn more about my interests,
+                    activities, and involvement
+                    outside of academics.
                 </p>
 
             </button>
@@ -562,7 +565,7 @@
 
 
     <!-- =========================
-         ABOUT ME PAGE
+         ABOUT ME PAGE                      //learned how to divide paras where with the <p>
          ========================= -->
 
     <section
@@ -573,16 +576,26 @@
 
             <h1>About Me</h1>
 
+            <h2 class="about-subheading">
+                Akshaya Venkatesan | Data Science Major | Applied Statistics Minor
+            </h2>
+
             <p>
+                I'm a Data Science major and am also working towards
+                an Applied Statistics minor at the University of Pittsburgh.
             </p>
 
             <p>
-                I can include information about my
-                education, interests, hobbies,
-                experiences, and goals here.
+                I have a few years of experience in Python, R, and Java.
+                I have a deep interest in AI and Data Analysis, especially
+                how AI will progress and change throughout the next few years.
             </p>
 
-            <!-- ADD MORE CONTENT HERE -->
+            <p>
+                Outside of school, I'm also a figure skater and am part
+                of the Pitt Figure Skating Club, which is an intercollegiate
+                skating club. I also enjoy watching F1 and hockey!
+            </p>
 
 
             <button
@@ -600,7 +613,7 @@
 
 
     <!-- =========================
-         PROJECTS PAGE
+         EXPERIENCES PAGE
          ========================= -->
 
     <section
@@ -609,88 +622,317 @@
 
         <div class="content-box">
 
-            <h1>My Projects</h1>
-
-            <p>
-                This is where I will display my projects.
-            </p>
+            <h1>My Experiences</h1>
 
 
-            <h2>
-                Personal Portfolio Website
-            </h2>
+            <!-- MINI RESEARCH PROJECT -->
 
-            <p>
-                My first project is this personal
-                portfolio website created using
-                HTML, CSS, and JavaScript.
-            </p>
+            <div class="experience-card">    <!-- was able to make dropdown with chat for each experience card-->
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('research-details', this)">
+
+                    Mini Research Project
+
+                    <span>⌄</span>
+
+                </button>
 
 
-            <!-- ADD MORE PROJECTS HERE -->
+                <div
+                    id="research-details"
+                    class="experience-details">
 
+                    <h3>
+                        May 2025 - June 2025
+                    </h3>
+
+                    <p>
+                        I co-conducted a small research project with a
+                        professor from West Chester University about the
+                        connection between misdiagnosis of heart attacks
+                        and what gender has to do as a variable and
+                        potential reason.
+                    </p>
+
+                    <p>
+                        I searched and retrieved a dataset that worked for
+                        this particular research topic and used Python to
+                        conduct and run EDAs on the selected datasets and
+                        then prepare and test the hypothesis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LIBRARY VOLUNTEERING -->
+
+            <div class="experience-card">
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('library-details', this)">
+
+                    Library Volunteering
+
+                    <span>⌄</span>
+
+                </button>
+
+
+                <div
+                    id="library-details"
+                    class="experience-details">
+
+                    <h3>
+                        October 2022 - May 2025
+                    </h3>
+
+                    <p>
+                        I volunteered at a local public library and during
+                        my sophomore year I helped with library book
+                        management, shelving, and pulling holds.
+                    </p>
+
+                    <p>
+                        I learned skills including organization,
+                        communication, and management.
+                    </p>
+
+                    <p>
+                        During my junior and senior years of high school,
+                        I focused on helping with children's activity
+                        programs conducted by my local library for
+                        children ages 5-12.
+                    </p>
+
+                    <p>
+                        Every week, I helped children with activities
+                        including arts and crafts, mini science experiments,
+                        and other creative projects.
+                    </p>
+
+                    <p>
+                        Through this experience, I developed organizational
+                        and communication skills as well as public speaking,
+                        active listening, and time management.
+                    </p>
+
+                </div>
+
+            </div>
+
+                        <!-- NEW EXPERIENCE -->
+
+            <div class="experience-card">
+
+                <button
+                    class="experience-title"
+                    onclick="toggleExperience('new-experience-details', this)">
+
+                    <!-- WRITE EXPERIENCE TITLE HERE -->
+                    Pitt Pathfinder | Tour Guide
+
+                    <span>⌄</span>
+
+                </button>
+
+
+                <div
+                    id="new-experience-details"
+                    class="experience-details">
+
+                    <h3>
+                        <!-- WRITE DATE / DATE RANGE HERE -->
+                        September 2025 - Present
+                    </h3>
+
+                    <p>
+                        <!-- WRITE YOUR FIRST PARAGRAPH HERE -->
+                        I'm a Pitt Pathfinder ( College Tour Guide) for the University of Pittsburgh. 
+                        I did extensive training throughout my first semsester as a first-year at Pitt. 
+                        Beyond being a paid job on campus, this role gives us the opportunity to showcase 
+                        what makes our university such an amazing place to prospective students.
+                        The training and the job so far is one of the best experiences of my life. It pulled me out 
+                        of my shell and motivated me to interact and connect with people all over the world. Every week 
+                        I meet people from around the country and the globe and interact with students and their families, 
+                        taking on the job of easing them into a new chapter that can be quite daunting as a high school 
+                        student. 
+                    </p>
+
+                    <p>
+                        <!-- WRITE YOUR SECOND PARAGRAPH HERE -->
+                        I learned an extensive variety of skills, the main one being public speaking. During training, we 
+                        had to learn and memorize around 3 1/2 hours worth of material about the University Campus as well as
+                        the City of Pittsburgh. Added to this, we needed to include flow, personality, and quick thinking when
+                        learning on how to talk to families. Aside from public speaking, I also learned time management, as 
+                        training semester was like taking an added 2 credit class and had quite a time commitment, and problem 
+                        solving, interpersonal skills, storytelling and leadership. 
+                    </p>
+
+                    <p>
+                        <!-- WRITE YOUR SECOND PARAGRAPH HERE -->
+                        This semester, I was also on the hiring team, which takes interviews for the incoming hiring class. 
+                        I also met a lot of students through this oppurtunity and it helped my confidence and descision-making.
+
+                </div>
+
+            </div>
+
+                        <button
+                            class="back-button"
+                            onclick="showPage('home')">
+
+                            ← Back to Home
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+<!-- =========================
+     INTERESTS PAGE
+     ========================= -->
+
+<section
+    id="interests"
+    class="page content-page">
+
+    <div class="content-box">
+
+        <h1>Interests And Involvement</h1>
+
+
+        <!-- INTEREST / INVOLVEMENT 1 -->
+
+        <div class="experience-card">
 
             <button
-                class="back-button"
-                onclick="showPage('home')">
+                class="experience-title"
+                onclick="toggleExperience('interest-one-details', this)">
 
-                ← Back to Home
+                <!-- REPLACE THIS WITH YOUR TITLE -->
+                HinduYUVA
+
+                <span>⌄</span>
 
             </button>
 
+
+            <div
+                id="interest-one-details"
+                class="experience-details">
+
+                <p>
+                    This semester I'm a part of HinduYUVA, a religious club
+                    focusing on Hinduism at Pitt. I've connected with a lot
+                    of people through this club and it also focuses on
+                    something that's a big part of my life.
+                </p>
+
+            </div>
+
         </div>
 
-    </section>
 
 
+        <!-- INTEREST / INVOLVEMENT 2 -->
 
-    <!-- =========================
-         SKILLS PAGE
-         ========================= -->
-
-    <section
-        id="skills"
-        class="page content-page">
-
-        <div class="content-box">
-
-            <h1>My Skills</h1>
-
-            <p>
-                This is where I can list skills
-                I have learned or am currently learning.
-            </p>
-
-
-            <ul>
-
-                <li>HTML</li>
-
-                <li>CSS</li>
-
-                <li>Problem Solving</li>
-
-                <li>Design</li>
-
-            </ul>
-
-
-            <!-- ADD MORE SKILLS HERE -->
-
+        <div class="experience-card">
 
             <button
-                class="back-button"
-                onclick="showPage('home')">
+                class="experience-title"
+                onclick="toggleExperience('interest-two-details', this)">
 
-                ← Back to Home
+                <!-- REPLACE THIS WITH YOUR TITLE -->
+                Figure Skating
+
+                <span>⌄</span>
 
             </button>
 
+
+            <div
+                id="interest-two-details"
+                class="experience-details">
+
+                <p>
+                    The Figure Skating Club at Pitt is an intercollegiate
+                    competition club that I'm a part of. I've figure skated
+                    since I was 7 years old and it has always been a really
+                    big part of my life.
+                </p>
+
+                <p>
+                    I've done competitions all throughout middle and high
+                    school and was really excited when I found out about the
+                    club sport at Pitt. It's a great opportunity to meet new
+                    friends and talented skaters from around the country!
+                </p>
+
+            </div>
+
         </div>
 
-    </section>
 
 
+        <!-- INTEREST / INVOLVEMENT 3 -->
+
+        <div class="experience-card">
+
+            <button
+                class="experience-title"
+                onclick="toggleExperience('interest-three-details', this)">
+
+                <!-- REPLACE THIS WITH YOUR TITLE -->
+                SLE Student Tutoring
+
+                <span>⌄</span>
+
+            </button>
+
+
+            <div
+                id="interest-three-details"
+                class="experience-details">
+
+                <p>
+                    Through my mom's company, Smart Learning Experience,
+                    I tutor students ranging from Grade 2-Grade 8 on
+                    creative writing classes throughout the week.
+                </p>
+
+                <p>
+                    It's a one-on-one class with students who are interested
+                    in gaining more knowledge with essay writing, paragraph
+                    writing, and storytelling, as well as regular grammar,
+                    reading, and comprehension skills.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <button
+            class="back-button"
+            onclick="showPage('home')">
+
+            ← Back to Home
+
+        </button>
+
+    </div>
+
+</section>
 
     <!-- =========================
          CONTACT PAGE
@@ -706,6 +948,7 @@
 
             <p>
                 Email:
+
                 <a href="mailto:akv62@pitt.edu">
                     akv62@pitt.edu
                 </a>
@@ -714,12 +957,15 @@
 
             <p>
                 GitHub:
+
+                <a
+                    href="https://github.com/akshayav137"
+                    target="_blank">
+
                     My GitHub
+
                 </a>
             </p>
-
-
-            <!-- ADD MORE CONTACT INFO HERE -->
 
 
             <button
@@ -756,30 +1002,61 @@
 
     <script>
 
+        /*
+        Shows the page selected by the user
+        and hides the other pages.
+        */
+
         function showPage(pageId) {
 
-            // Find all sections with the class "page"
             const pages =
                 document.querySelectorAll(".page");
 
-
-            // Hide every page
             pages.forEach(function(page) {
 
                 page.classList.remove("active");
 
             });
 
-
-            // Show the page that was clicked
             document
                 .getElementById(pageId)
                 .classList
                 .add("active");
 
-
-            // Return to the top of the screen
             window.scrollTo(0, 0);
+
+        }
+
+
+        /*
+        Opens and closes each experience card.
+        */
+
+        function toggleExperience(experienceId, button) {
+
+            const experience =
+                document.getElementById(experienceId);
+
+            experience.classList.toggle("active");
+
+
+            const arrow =
+                button.querySelector("span");
+
+
+            if (experience.classList.contains("active")) {
+
+                arrow.style.transform =
+                    "rotate(180deg)";
+
+            }
+
+            else {
+
+                arrow.style.transform =
+                    "rotate(0deg)";
+
+            }
 
         }
 
