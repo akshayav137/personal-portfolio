@@ -1,0 +1,111 @@
+/* 
+AI Usage:
+ChatGPT helped provide an initial CSS structure.
+I am modifying the design as I develop my portfolio.
+*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
+    background-color: white;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #222;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sections */
+
+section {
+    padding: 70px 10%;
+}
+
+
+#home {
+    min-height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+
+#home p {
+    font-size: 20px;
+    max-width: 600px;
+}
+
+
+/* Projects */
+
+.project-card {
+    background-color: white;
+
+    padding: 25px;
+    margin: 20px 0;
+
+    border-radius: 10px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    #home h1 {
+        font-size: 36px;
+    }
+
+}

@@ -233,6 +233,123 @@
 
 
         /* =========================
+           ABOUT ME
+           ========================= */
+
+        .about-subheading {
+            color: var(--dark-sage);
+
+            font-size: 20px;
+
+            font-weight: normal;
+
+            margin-top: -15px;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           EXPERIENCE CARDS
+           ========================= */
+
+        .experience-card {
+            background-color: white;
+
+            border: 2px solid var(--beige);
+
+            border-radius: 16px;
+
+            margin: 25px 0;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 6px 18px
+                rgba(0, 0, 0, 0.06);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 24px
+                rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* EXPERIENCE CARD TITLE */
+
+        .experience-title {
+            width: 100%;
+
+            padding: 24px 28px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: var(--light-sage);
+
+            color: var(--text-dark);
+
+            border: none;
+
+            font-size: 23px;
+            font-weight: bold;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+        .experience-title:hover {
+            background-color: var(--beige);
+        }
+
+        .experience-title span {
+            font-size: 24px;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+
+        /* EXPERIENCE TEXT */
+
+        .experience-details {
+            display: none;
+
+            padding: 28px;
+
+            background-color: white;
+        }
+
+        .experience-details.active {
+            display: block;
+        }
+
+        .experience-details h3 {
+            margin-top: 0;
+
+            color: var(--dark-sage);
+
+            font-size: 20px;
+        }
+
+        .experience-details p {
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
            BACK BUTTON
            ========================= */
 
@@ -293,6 +410,10 @@
 
             .content-box {
                 padding: 30px;
+            }
+
+            .experience-title {
+                font-size: 19px;
             }
 
         }
@@ -373,6 +494,7 @@
                 class="home-card"
                 onclick="showPage('about')">
 
+                <h2>About Me</h2>
 
                 <p>
                     Learn more about who I am,
@@ -390,12 +512,12 @@
                 class="home-card"
                 onclick="showPage('projects')">
 
-                <h2>My Projects</h2>
+                <h2>My Experiences</h2>
 
                 <p>
-                    Explore projects I have created
-                    and work I complete throughout
-                    the semester.
+                    Explore projects, research,
+                    volunteering, and other experiences
+                    I have been involved in.
                 </p>
 
             </button>
