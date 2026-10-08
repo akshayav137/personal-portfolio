@@ -83,6 +83,42 @@ section {
 }
 
 /* =========================
+   PROJECT LINKS
+   ========================= */
+
+.project-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 11px 18px;
+
+    background-color: var(--dark-sage);
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-link:hover {
+    background-color: var(--light-sage);
+    color: var(--text-dark);
+
+    transform: translateY(-2px);
+}
+/* =========================
    AI CREDIT
    ========================= */
 
